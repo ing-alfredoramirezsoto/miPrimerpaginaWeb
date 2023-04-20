@@ -1,0 +1,5 @@
+El archivo ".gitignore" es utilizado por el sistema de control de versiones Git para ignorar archivos y directorios que no deben ser incluidos en el repositorio.
+
+Esto es especialmente útil cuando se trabaja en proyectos que tienen muchos archivos o directorios que no son necesarios para el desarrollo o que no deben ser compartidos públicamente. Al especificar estos archivos y directorios en el archivo ".gitignore", Git los ignorará automáticamente al realizar una confirmación o una actualización.
+
+Además, el archivo ".gitignore" también puede ser utilizado para evitar que Git realice seguimiento de archivos generados automáticamente, como archivos de registro o archivos binarios, que pueden aumentar el tamaño del repositorio y dificultar la colaboración en el proyecto.
