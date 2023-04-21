@@ -8,7 +8,8 @@ header{
 }
 
 .caja{
-    width: 940px;
+    max-width: 940px;
+    width: 100%;
     position: relative;
     margin: 0 auto;
 }
@@ -38,21 +39,38 @@ nav a:hover{
 }
 
 .productos{
-    width: 940px;
+    max-width: 940px;
+    width: 100%;
     margin: 0 auto;
     padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.productos img {
+    max-width: 100%;
+    height: auto;
 }
 
 .productos li{
+    display: flex;
+    flex-direction: column;
     display: inline-block;
     text-align: center;
-    width: 30%;
+    width: 100%;
+    max-width: 30%;
     vertical-align: top;
-    margin: 0 1.5%;
+    margin-bottom: 20px;
     padding: 30px 10px;
     box-sizing: border-box;
     border: 2px solid #000000;
     border-radius: 10px;
+}
+
+.productos li .productoPrecio {
+    margin-top: 20px;
 }
 
 .productos li:hover{
@@ -246,21 +264,74 @@ td, th{
     margin: 1em auto;
 }
 
-@media screen and (max-width: 480px){
-    h1{
+/* Media queries */
+
+@media screen and (max-width: 1024px) {
+    .caja, .principal, .mapaContenido, .contenidoDiferenciales, .video {
+        width: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        position: static;
         text-align: center;
     }
 
-    nav{
-        position: static;
+    nav li {
+        display: block;
+        margin: 10px 0;
     }
 
-    .caja, .principal, .mapaContenido, .contenidoDiferenciales, .video{
-        width: auto;
+    .productos li {
+        max-width: 48%;
+        margin-bottom: 20px;
     }
 
-    .listaDiferenciales, .imagenDiferenciales{
+    .utensilios {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px;
+    }
+
+    .listaDiferenciales, .imagenDiferenciales {
         width: 100%;
     }
 
+    .contenidoDiferenciales {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+
+        .productos li {
+        max-width: 100%;
+    }
+
+        .productoPrecio {
+        font-size: 18px;
+    }
+
+    .caja, .principal, .mapaContenido, .contenidoDiferenciales, .video {
+        width: auto;
+    }
+
+    .listaDiferenciales, .imagenDiferenciales {
+        width: 100%;
+    }
 }
